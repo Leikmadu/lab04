@@ -147,16 +147,12 @@ EOF
 
 ## Homework
 
-Представьте, что вы стажер в компании "Formatter Inc.".
-
-### Задание 1
-
-#### Вам поручили перейти на систему автоматизированной сборки CMake. Исходные файлы находятся в директории formatter_lib. В этой директории находятся файлы для статической библиотеки formatter. Создайте CMakeList.txt в директории formatter_lib, с помощью которого можно будет собирать статическую библиотеку formatter.
-
-- 1. Создаем папку formatter_lib:
-
 ```bash
 $ mkdir -p .github/workflows
+```
+В файл вставляем такой текст:
+
+```bash
 cat > .github/workflows/ci.yml <<'EOF'
 name: C++ CI
 
@@ -226,8 +222,8 @@ echo "[![C++ CI](https://github.com/Leikmadu/lab04/actions/workflows/ci.yml/badg
 ```
 
 ``` bash
-$git add .github/workflows/ci.yml README.md
-$git commit -m "Add CI with GCC and Clang on Linux and Windows"
+$ git add .github/workflows/ci.yml README.md
+$ git commit -m "Add CI with GCC and Clang on Linux and Windows"
 $ git push origin master
 ```
 
